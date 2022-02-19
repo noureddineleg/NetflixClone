@@ -1,5 +1,5 @@
 //
-//  TabBarViewController.swift
+//  MainTabBarViewController.swift
 //  NetflixClone
 //
 //  Created by Noureddine Legragui on 19/2/2022.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController {
+class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemBlue
     }
 
 
