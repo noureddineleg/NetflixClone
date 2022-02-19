@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		16DA37F927C13E0A00B14120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA37F827C13E0A00B14120 /* AppDelegate.swift */; };
 		16DA37FB27C13E0A00B14120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA37FA27C13E0A00B14120 /* SceneDelegate.swift */; };
-		16DA37FD27C13E0A00B14120 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA37FC27C13E0A00B14120 /* ViewController.swift */; };
+		16DA37FD27C13E0A00B14120 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA37FC27C13E0A00B14120 /* TabBarViewController.swift */; };
 		16DA380227C13E0C00B14120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DA380127C13E0C00B14120 /* Assets.xcassets */; };
 		16DA380527C13E0C00B14120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DA380327C13E0C00B14120 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 		16DA37F527C13E0A00B14120 /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DA37F827C13E0A00B14120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16DA37FA27C13E0A00B14120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		16DA37FC27C13E0A00B14120 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16DA37FC27C13E0A00B14120 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		16DA380127C13E0C00B14120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16DA380427C13E0C00B14120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16DA380627C13E0C00B14120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,14 +54,86 @@
 		16DA37F727C13E0A00B14120 /* NetflixClone */ = {
 			isa = PBXGroup;
 			children = (
-				16DA37F827C13E0A00B14120 /* AppDelegate.swift */,
-				16DA37FA27C13E0A00B14120 /* SceneDelegate.swift */,
-				16DA37FC27C13E0A00B14120 /* ViewController.swift */,
-				16DA380127C13E0C00B14120 /* Assets.xcassets */,
-				16DA380327C13E0C00B14120 /* LaunchScreen.storyboard */,
-				16DA380627C13E0C00B14120 /* Info.plist */,
+				16DA381127C1482D00B14120 /* Application Delegates */,
+				16DA380F27C147EF00B14120 /* Extensions */,
+				16DA380E27C147DA00B14120 /* Models */,
+				16DA380C27C1476B00B14120 /* Modules */,
+				16DA380D27C147AF00B14120 /* Ressources */,
+				16DA381027C1480F00B14120 /* Shared Components */,
+				16DA381327C148FF00B14120 /* Storyboard */,
+				16DA381227C148ED00B14120 /* Supporting Files */,
 			);
 			path = NetflixClone;
+			sourceTree = "<group>";
+		};
+		16DA380C27C1476B00B14120 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				16DA381427C1499500B14120 /* TabBarViewController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		16DA380D27C147AF00B14120 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				16DA380127C13E0C00B14120 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		16DA380E27C147DA00B14120 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		16DA380F27C147EF00B14120 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		16DA381027C1480F00B14120 /* Shared Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Shared Components";
+			sourceTree = "<group>";
+		};
+		16DA381127C1482D00B14120 /* Application Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				16DA37F827C13E0A00B14120 /* AppDelegate.swift */,
+				16DA37FA27C13E0A00B14120 /* SceneDelegate.swift */,
+			);
+			path = "Application Delegates";
+			sourceTree = "<group>";
+		};
+		16DA381227C148ED00B14120 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16DA380627C13E0C00B14120 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16DA381327C148FF00B14120 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				16DA380327C13E0C00B14120 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		16DA381427C1499500B14120 /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				16DA37FC27C13E0A00B14120 /* TabBarViewController.swift */,
+			);
+			path = TabBarViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16DA37FD27C13E0A00B14120 /* ViewController.swift in Sources */,
+				16DA37FD27C13E0A00B14120 /* TabBarViewController.swift in Sources */,
 				16DA37F927C13E0A00B14120 /* AppDelegate.swift in Sources */,
 				16DA37FB27C13E0A00B14120 /* SceneDelegate.swift in Sources */,
 			);

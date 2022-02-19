@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TabBarViewController.swift
 //  NetflixClone
 //
 //  Created by Noureddine Legragui on 19/2/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TabBarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
