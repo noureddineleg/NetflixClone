@@ -12,8 +12,8 @@ class HomeViewController: UIViewController {
     // MARK: - Properties
     
     private let homeTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.register(UITableViewCell.self , forCellReuseIdentifier: "cell")
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.register(CollectionViewCell.self, forCellReuseIdentifier: CollectionViewCell.identifier)
         
         return tableView
     }()
@@ -26,7 +26,8 @@ class HomeViewController: UIViewController {
         
         homeTableView.delegate = self
         homeTableView.dataSource = self
-    
+        
+        homeTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 350))
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,24 +37,30 @@ class HomeViewController: UIViewController {
 
 }
 
-// MARK: - UITableViewDelegate
+// MARK: - UITableViewDataSource & UITableViewDelegate
 
-extension HomeViewController: UITableViewDelegate {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
-}
-
-// MARK: - UITableViewDataSource
-
-extension HomeViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 10
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello World!"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else { return UITableViewCell() }
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
 
 }
