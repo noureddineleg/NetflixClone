@@ -11,6 +11,8 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
+    let sectionsTitle: [String] = ["Popular", "Trending", "Trending Tv", "Upcoming Movies", "Top rated"]
+    
     private let homeTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(CollectionViewCell.self, forCellReuseIdentifier: CollectionViewCell.identifier)
@@ -35,12 +37,18 @@ class HomeViewController: UIViewController {
     
     private func setupUI() {
         
-        // Delegates
-        homeTableView.delegate = self
-        homeTableView.dataSource = self
+        // Table View
+        setupTableView()
         
         // Navigation bar
         configureNavBar()
+    }
+    
+    private func setupTableView() {
+        
+        // Delegates
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
         
         // Header
         let headerView = HeroHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 350))
@@ -67,7 +75,11 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return sectionsTitle.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionsTitle[section]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,6 +98,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        
+        header.textLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
+        header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
+        header.textLabel?.textColor = .black
+        header.textLabel?.text = header.textLabel?.text?.lowercased()
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
