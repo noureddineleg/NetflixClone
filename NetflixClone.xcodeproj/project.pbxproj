@@ -18,6 +18,7 @@
 		16DA382127C14C1C00B14120 /* UpCommingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA382027C14C1C00B14120 /* UpCommingViewController.swift */; };
 		16DA382527C4056300B14120 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA382427C4056200B14120 /* CollectionViewCell.swift */; };
 		16DA382827C51BA800B14120 /* HeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA382727C51BA800B14120 /* HeroHeaderView.swift */; };
+		16DA382B27C5936A00B14120 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA382A27C5936900B14120 /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		16DA382027C14C1C00B14120 /* UpCommingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpCommingViewController.swift; sourceTree = "<group>"; };
 		16DA382427C4056200B14120 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		16DA382727C51BA800B14120 /* HeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderView.swift; sourceTree = "<group>"; };
+		16DA382A27C5936900B14120 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		16DA37F727C13E0A00B14120 /* NetflixClone */ = {
 			isa = PBXGroup;
 			children = (
+				16DA382927C5933D00B14120 /* Networking */,
 				16DA381127C1482D00B14120 /* Application Delegates */,
 				16DA380F27C147EF00B14120 /* Extensions */,
 				16DA380E27C147DA00B14120 /* Models */,
@@ -218,6 +221,14 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		16DA382927C5933D00B14120 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				16DA382A27C5936900B14120 /* APICaller.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +302,7 @@
 				16DA381F27C14C0500B14120 /* SearchViewController.swift in Sources */,
 				16DA381D27C14BEC00B14120 /* DownloadsViewController.swift in Sources */,
 				16DA382527C4056300B14120 /* CollectionViewCell.swift in Sources */,
+				16DA382B27C5936A00B14120 /* APICaller.swift in Sources */,
 				16DA382127C14C1C00B14120 /* UpCommingViewController.swift in Sources */,
 				16DA382827C51BA800B14120 /* HeroHeaderView.swift in Sources */,
 				16DA37FD27C13E0A00B14120 /* MainTabBarViewController.swift in Sources */,

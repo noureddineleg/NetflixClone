@@ -26,6 +26,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(homeTableView)
         setupUI()
+        APICaller.shared.getTrendingMovies { _ in
+        }
     }
     
     override func viewDidLayoutSubviews() {
