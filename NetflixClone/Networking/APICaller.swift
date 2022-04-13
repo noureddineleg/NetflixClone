@@ -28,7 +28,7 @@ class APICaller {
     
     // MARK: -
     
-    func getTrendingMovies(completion: @escaping(String) -> Void) {
+    func getTrendingMovies(completion: @escaping (String) -> Void) {
         
         guard let url = URL(string: "\(Constants.baseURL)/3/trending/all/day?api_key=\(Constants.APY_KEY)") else { return }
         
