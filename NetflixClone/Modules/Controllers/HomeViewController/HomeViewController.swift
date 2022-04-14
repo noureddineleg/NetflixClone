@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
-    let sectionsTitle: [String] = ["Popular", "Trending", "Trending Tv", "Upcoming Movies", "Top rated"]
+    let sectionsTitle: [String] = ["Popular", "Trending Tv", "Trending", "Upcoming Movies", "Top rated"]
     
     private let homeTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -79,7 +79,7 @@ class HomeViewController: UIViewController {
             UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
         ]
         
-        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.tintColor = .white
     }
 
 }
@@ -119,8 +119,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         header.textLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
-        header.textLabel?.textColor = .black
-        header.textLabel?.text = header.textLabel?.text?.lowercased()
+        header.textLabel?.textColor = .white
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

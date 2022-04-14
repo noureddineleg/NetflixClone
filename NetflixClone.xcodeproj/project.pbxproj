@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		164BF3CD2807961D00675AEE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164BF3CC2807961D00675AEE /* Movie.swift */; };
+		164BF3CF28079B9B00675AEE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164BF3CE28079B9B00675AEE /* Extensions.swift */; };
 		16DA37F927C13E0A00B14120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA37F827C13E0A00B14120 /* AppDelegate.swift */; };
 		16DA37FB27C13E0A00B14120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA37FA27C13E0A00B14120 /* SceneDelegate.swift */; };
 		16DA37FD27C13E0A00B14120 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DA37FC27C13E0A00B14120 /* MainTabBarViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		164BF3CC2807961D00675AEE /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		164BF3CE28079B9B00675AEE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		16DA37F527C13E0A00B14120 /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DA37F827C13E0A00B14120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16DA37FA27C13E0A00B14120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				16DA380127C13E0C00B14120 /* Assets.xcassets */,
+				164BF3CE28079B9B00675AEE /* Extensions.swift */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				16DA382127C14C1C00B14120 /* UpCommingViewController.swift in Sources */,
 				16DA382827C51BA800B14120 /* HeroHeaderView.swift in Sources */,
 				16DA37FD27C13E0A00B14120 /* MainTabBarViewController.swift in Sources */,
+				164BF3CF28079B9B00675AEE /* Extensions.swift in Sources */,
 				16DA37F927C13E0A00B14120 /* AppDelegate.swift in Sources */,
 				16DA37FB27C13E0A00B14120 /* SceneDelegate.swift in Sources */,
 				164BF3CD2807961D00675AEE /* Movie.swift in Sources */,
