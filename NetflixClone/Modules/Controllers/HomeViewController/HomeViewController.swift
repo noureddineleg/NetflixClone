@@ -26,8 +26,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(homeTableView)
         setupUI()
-        APICaller.shared.getTrendingMovies { _ in
-        }
+       getTrendingMovies()
     }
     
     override func viewDidLayoutSubviews() {
@@ -55,6 +54,19 @@ class HomeViewController: UIViewController {
         // Header
         let headerView = HeroHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 350))
         homeTableView.tableHeaderView = headerView
+    }
+    
+    // MARK: - Local Helpers
+    
+    private func getTrendingMovies() {
+        APICaller.shared.getTrendingMovies { results in
+            switch results {
+            case.success(let movies):
+                print(movies)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     private func configureNavBar() {

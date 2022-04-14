@@ -18,6 +18,12 @@ struct Constants {
     
 }
 
+// MARK: - APIError
+
+enum APIError {
+    case failedToGetData
+}
+
 // MARK: - APICaller
 
 class APICaller {
@@ -28,7 +34,7 @@ class APICaller {
     
     // MARK: -
     
-    func getTrendingMovies(completion: @escaping (String) -> Void) {
+    func getTrendingMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
         
         guard let url = URL(string: "\(Constants.baseURL)/3/trending/all/day?api_key=\(Constants.APY_KEY)") else { return }
         
@@ -36,10 +42,10 @@ class APICaller {
             guard let data = data, error == nil else { return }
             
             do {
-                let result = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
-                print(result)
+                let result = try JSONDecoder().decode(TrendingMoviesResponse.self, from: data)
+                completion(.success(result.results))
             } catch {
-                print(error.localizedDescription)
+                completion(.failure(error))
             }
         }
         
